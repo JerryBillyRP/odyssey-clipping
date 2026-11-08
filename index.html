@@ -1,9 +1,112 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Odyssey Clipping</title><link rel="stylesheet" href="style.css"></head>
-<body><main>
-<h1>Odyssey Clipping</h1>
-<p class="meta">Short-form highlight clips of streamers who run official clipping programs.</p>
-<p>Odyssey Clipping edits short vertical clips (captions, titles, crops) from streams whose creators have given permission through official clipping campaigns, and posts them to the Odyssey Clipping accounts on TikTok and YouTube Shorts, crediting each streamer.</p>
-<p><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></p>
-</main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odyssey Clipping</title>
+<meta name="description" content="Odyssey Clipping makes short vertical highlight clips of streamers who run official clipping campaigns, credited and posted with permission.">
+<link rel="icon" href="assets/favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/icon-256.png" alt="">Odyssey Clipping</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#uploader">Uploader</a>
+      <a href="#tiktok">TikTok integration</a>
+      <a href="#contact">Contact</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <h1>Stream highlights, <span>clipped with permission.</span></h1>
+    <p class="lead">Odyssey Clipping turns the best moments from live streams into short vertical videos for TikTok, with captions, a clear title and credit to the streamer. We only clip creators who invite clippers through official clipping campaigns.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://www.tiktok.com/@odysseyclipping">Watch on TikTok</a>
+      <a class="btn ghost" href="#how">How we make clips</a>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="sub">Streamers go live for hours. We find the moments worth watching and make them easy to enjoy in under a minute.</p>
+      <div class="grid">
+        <div class="card"><h3>Permission first</h3><p>Every clip comes from a streamer's official clipping campaign, such as Lacy's campaign on clipping.net. If a creator hasn't invited clippers, we don't clip them.</p></div>
+        <div class="card"><h3>Always credited</h3><p>Each video names the streamer on screen, links their channel and uses the tags their campaign asks for.</p></div>
+        <div class="card"><h3>Clearly labelled</h3><p>Campaign clips are paid partnerships, so they're posted with TikTok's paid-partnership disclosure.</p></div>
+        <div class="card"><h3>Edited, not reuploaded</h3><p>We cut to the moment and reframe for vertical viewing, adding word-by-word captions and a title, rather than reposting raw footage.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>How a clip is made</h2>
+      <p class="sub">From a live stream to a TikTok draft, using each platform's own tools along the way.</p>
+      <div class="grid">
+        <div class="card"><span class="step-num">1</span><h3>Find the moment</h3><p>We follow the streamers in our campaigns and pick moments viewers are already clipping and talking about.</p></div>
+        <div class="card"><span class="step-num">2</span><h3>Clip it on Twitch</h3><p>We create the clip with Twitch's own Clip tool on our Twitch account, then download it with Twitch's download option.</p></div>
+        <div class="card"><span class="step-num">3</span><h3>Edit for vertical</h3><p>The clip is reframed to 9:16 and gets captions, a title and the streamer credit, checked against the campaign's rules.</p></div>
+        <div class="card"><span class="step-num">4</span><h3>Send to TikTok</h3><p>The Odyssey Clipping Uploader sends the finished video to our TikTok inbox as a draft.</p></div>
+        <div class="card"><span class="step-num">5</span><h3>Review and post</h3><p>We open the draft in TikTok, add the caption and paid-partnership label, and post it ourselves.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="uploader">
+    <div class="wrap">
+      <h2>The Odyssey Clipping Uploader</h2>
+      <p class="sub">A desktop app we use to send finished clips to TikTok. It runs on our own computer and connects to our TikTok account through Login with TikTok.</p>
+      <div class="shots">
+        <figure class="shot"><img src="assets/uploader-home.jpg" alt="Uploader showing finished clips and a Login with TikTok button"><figcaption>Finished clips with previews and suggested captions. Connect with "Login with TikTok".</figcaption></figure>
+        <figure class="shot"><img src="assets/uploader-connected.jpg" alt="Uploader showing the connected TikTok account"><figcaption>Once connected, the uploader shows which TikTok account is in use, with a Disconnect button.</figcaption></figure>
+        <figure class="shot"><img src="assets/uploader-sent.jpg" alt="Uploader confirming a clip was sent to the TikTok inbox"><figcaption>"Send to TikTok inbox" uploads the clip and shows its status until TikTok confirms the draft arrived.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="tiktok">
+    <div class="wrap two">
+      <div>
+        <h2>How the uploader uses TikTok</h2>
+        <p class="sub">We use two TikTok for Developers products, and only for our own account.</p>
+      </div>
+      <ul class="ticks">
+        <li><b>Login Kit</b> (<code>user.info.basic</code>): shows the connected account's display name and avatar so we know which account is linked.</li>
+        <li><b>Content Posting API</b> (<code>video.upload</code>): uploads a finished clip to the account's TikTok inbox as a draft. Nothing is published automatically; every post is reviewed and posted in the TikTok app.</li>
+        <li>Access tokens stay on our computer and are never shared or sold. "Disconnect" removes them, and access can be revoked in TikTok's settings at any time.</li>
+        <li>We don't add watermarks, logos or links to videos beyond the streamer credit their campaign requires.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap two">
+      <div>
+        <h2>Contact</h2>
+        <p class="sub">Streamers, campaign managers and viewers can reach us any time. If you're a creator and want a clip of you taken down, tell us and we'll remove it.</p>
+      </div>
+      <ul class="ticks">
+        <li>TikTok: <a href="https://www.tiktok.com/@odysseyclipping">@odysseyclipping</a></li>
+        <li>Requests and questions: <a href="https://github.com/JerryBillyRP/odyssey-clipping/issues">open an issue on GitHub</a></li>
+        <li>Legal: <a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Odyssey Clipping</span>
+    <span><a href="terms.html">Terms of Service</a> · <a href="privacy.html">Privacy Policy</a> · <a href="#contact">Contact</a></span>
+  </div>
+</footer>
+</body>
+</html>
